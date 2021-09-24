@@ -10,13 +10,7 @@ theta = zeros(size(X, 2), 1);
 %               to linear regression and put the result in theta.
 %
 
-% ---------------------- Sample Solution ----------------------
-
-
-
-
-% -------------------------------------------------------------
-
+theta = inv(X' * X) * X' * y; %formula is theta = (X^T i.e. transpose * X)^-1 i.e. inv * X^T * y
 
 % ============================================================
 

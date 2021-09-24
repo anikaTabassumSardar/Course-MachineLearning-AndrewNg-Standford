@@ -16,12 +16,11 @@ for iter = 1:num_iters
     % Hint: While debugging, it can be useful to print out the values
     %       of the cost function (computeCost) and gradient here.
     %
-
-
-
-
-
-
+    hypothesis = X * theta;
+    error = hypothesis - y; %actual vs prediction/hypothesis error
+    temp0 = theta(1) - ((alpha/m) * X(:, 1)' * error); %theta0
+    temp1 = theta(2) - ((alpha/m) * X(:, 2)' * error); %theta1
+    theta = [temp0; temp1]; %simultaneous update
 
     % ============================================================
 

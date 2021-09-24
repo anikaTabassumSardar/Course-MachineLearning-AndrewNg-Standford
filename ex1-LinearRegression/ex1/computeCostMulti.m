@@ -12,7 +12,11 @@ J = 0;
 % ====================== YOUR CODE HERE ======================
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
-
+%vectorized solution
+hypothesis = X * theta; %i.e.htheta(x) = X * theta;
+%cost function formula: 1/2m cumsum(1 to m) (h-sub-theta(x superscript i) -
+%y superscript i)^2
+J = (1/(2*m)) * sum((hypothesis-y).^2);
 
 
 

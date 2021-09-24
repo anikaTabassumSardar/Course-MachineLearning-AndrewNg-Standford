@@ -17,15 +17,9 @@ for iter = 1:num_iters
     %       of the cost function (computeCostMulti) and gradient here.
     %
 
-
-
-
-
-
-
-
-
-
+ hypothesis = X * theta;
+ error = hypothesis - y; %actual vs prediction/hypothesis error
+ theta = theta - ((alpha/m) * X' * error);
 
     % ============================================================
 

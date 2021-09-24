@@ -24,15 +24,10 @@ sigma = zeros(1, size(X, 2));
 %               each feature. 
 %
 % Hint: You might find the 'mean' and 'std' functions useful.
-%       
-
-
-
-
-
-
-
-
+% 
+mu = mean(X); %computes the mean of each column
+sigma = std(X); %computes the std of each column
+X_norm = (X - mu) ./ sigma; %element wise division
 
 % ============================================================
 
