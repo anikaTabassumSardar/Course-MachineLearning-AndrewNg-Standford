@@ -12,6 +12,13 @@ figure; hold on;
 %               examples and 'ko' for the negative examples.
 %
 
+%Find the indices of the positive and negative examples
+pos = find(y == 1); neg = find(y == 0);
+
+%plot examples
+plot(X(pos,1), X(pos,2), 'k+', 'LineWidth', 2, 'MarkerSize', 7); %X(pos,1) and X(pos, 2) retrieves each column and checks if y is pos or neg and based on that extracts and plots data
+plot(X(neg,1), X(neg,2), 'ko', 'MarkerFaceColor', 'y', 'MarkerSize', 7);
+
 
 
 
